@@ -3,8 +3,8 @@ c = pwd;
 disp(mfilename('fullpath'));
 %p = uigetdir();
 addpath(fullfile(pwd, "..", "simulation_code" ));
-p = fullfile(pwd, "..",  "D50Quant100", "rho1000sigma7220nu98muair0", "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U39", "N=20tol=5.00e-05");
-%p = uigetdir();
+p = fullfile(pwd, "..",  "D50Quant50", "rho1000sigma7220nu98muair0", "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U38", "N=60tol=5.00e-05");
+
 cd(p);
 
 savefile = true; % flag to export files
@@ -161,7 +161,7 @@ function plotter(prefixString)
         % Check if the file name contains the prefix string
         if startsWith(fileName, prefixString)
             % Read the CSV file (assuming no headers)
-            data = sortrows(readmatrix(fullfile(files(i).folder, fileName)), 1);
+            data = sortrows(dlmread(fullfile(files(i).folder, fileName), ','), 1);
             data = data(data(:, 1) > l & data(:, 1) <= r, :);
             % Plot the data
             %figure;
