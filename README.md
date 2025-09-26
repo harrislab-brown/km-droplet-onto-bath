@@ -109,5 +109,4 @@ If you use this code or reproduce results, please cite the companion paper. A Bi
 
 ## Contact
 Questions or issues with running the code?
-- Open an issue on this repository, or
-- Contact the maintainer(s). Legacy notes list: grcarlosa@gmail.com
+- Open an issue on this repository
