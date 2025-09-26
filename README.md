@@ -1,8 +1,15 @@
-# Kinematic Match: Droplet Impact onto a Bath (MATLAB)
+# Droplet Rebounds off a Fluid Bath: Kinematic‑Match Simulations and Experiments (MATLAB)
 
-This repository contains MATLAB code and precomputed data to simulate a deformable droplet impacting a liquid bath using a spherical-harmonic (SH) representation of the droplet shape and a Dirichlet-to-Neumann (DtN) operator for the bath. It includes automation scripts to generate parameterized folder trees, run sweeps (water/oil presets), and post-process results.
+![Graphical Abstract](matlab/0_data/manual/GraphicalAbstract.jpg)
+
+This repository accompanies the manuscript “Droplet rebounds off a fluid bath: kinematic match simulations and experiments.” It contains MATLAB code and precomputed data to simulate non‑coalescing droplet–bath impacts using the full kinematic‑match (KM) framework, now extended to include droplet deformation. The solver predicts the time‑evolving contact area, pressure distribution, and wave field on both bodies. Automation scripts generate parameterized folder trees, run sweeps (water/oil presets), and aid post‑processing and figure reproduction.
 
 All inputs use CGS units (cm–g–s). Folder names encode parameters to keep runs organized and reproducible.
+
+## Paper Context
+- Scope: Non‑coalescing, axisymmetric droplet impacts on a deep bath at low Weber number, where surface tension and weak viscosity dominate.
+- Model: Full KM with spherical‑harmonic deformation of the droplet, weakly viscous bath, and natural geometric/kinematic contact constraints. No explicit gas‑film resolution is used.
+- Results: Detailed predictions (pressed area, pressures, wave field) that compare favorably with prior and new experiments for sub‑millimetric droplets at low impact speed.
 
 ## What’s Included
 - Core solver routines (SH dynamics, contact/pressure solver, DtN coupling).
@@ -97,11 +104,10 @@ Post-processing helpers (examples):
 ## Legacy Notes
 `Read_me.txt` contains the original description of the folder system and an older entry-point (`VertPolarExact*.m`). The modern workflow routes runs through `simulation_code/solve_motion.m` and the 2024 sweepers.
 
-## Citation
-If you use this code or reproduce results, please cite the associated paper(s). If you need a specific bib entry, open an issue or contact the authors.
+## Cite This Work
+If you use this code or reproduce results, please cite the companion paper. A BibTeX entry will be added upon publication. In the meantime, cite as “Agüero, Galeano‑Rios, Ragazzo, Gabbard, Harris, Milewski (2025), Droplet rebounds off a fluid bath: kinematic match simulations and experiments.”
 
 ## Contact
 Questions or issues with running the code?
 - Open an issue on this repository, or
 - Contact the maintainer(s). Legacy notes list: grcarlosa@gmail.com
-
