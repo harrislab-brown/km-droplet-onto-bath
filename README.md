@@ -7,7 +7,7 @@
 
 ![Graphical Abstract](matlab/0_data/manual/GraphicalAbstract.jpg)
 
-This repository accompanies the manuscript “Droplet rebounds off a fluid bath: kinematic match simulations and experiments.” It contains MATLAB code and precomputed data to simulate non‑coalescing droplet–bath impacts using the full kinematic‑match (KM) framework, now extended to include droplet deformation. The solver predicts the time‑evolving contact area, pressure distribution, and wave field on both bodies. Automation scripts generate parameterized folder trees, run sweeps (water/oil presets), and aid post‑processing and figure reproduction.
+This repository accompanies the manuscript “Droplet rebounds off a fluid bath: kinematic match simulations and experiments.” It contains MATLAB code and precomputed data to simulate non‑coalescing droplet–bath impacts using the full kinematic‑match (KM) framework, extended to include droplet deformation. The solver predicts the time‑evolving contact area, pressure distribution, and wave field on both bodies. Automation scripts generate parameterized folder trees, run sweeps (water/oil presets), and aid post‑processing and figure reproduction.
 
 All inputs use CGS units (cm–g–s). Folder names encode parameters to keep runs organized and reproducible.
 
@@ -110,8 +110,17 @@ Post-processing helpers (examples):
 `Read_me.txt` contains the original description of the folder system and an older entry-point (`VertPolarExact*.m`). The modern workflow routes runs through `simulation_code/solve_motion.m` and the 2024 sweepers.
 
 ## Cite This Work
-If you use this code or reproduce results, please cite the companion paper. A BibTeX entry will be added upon publication. In the meantime, cite as “Agüero, Galeano‑Rios, Ragazzo, Gabbard, Harris, Milewski (2025), Droplet rebounds off a fluid bath: kinematic match simulations and experiments.”
-
+```bibtex
+@article{Agüero_Galeano-Rios_Ragazzo_Gabbard_Harris_Milewski_2026,
+      title={Droplet rebounds off a fluid bath at low Weber numbers}, 
+      author={Agüero, Elvis A. and Galeano-Rios, Carlos A. and Ragazzo, Clodoaldo and Gabbard, Chase T. and Harris, Daniel M. and Milewski, Paul A.},
+      year={2026},
+      volume={1031},
+      pages={A6},
+      journal={Journal of Fluid Mechanics},
+      doi={10.1017/jfm.2026.11291},
+}
+```
 ## Contact
 Questions or issues with running the code?
 - Open an issue on this repository
